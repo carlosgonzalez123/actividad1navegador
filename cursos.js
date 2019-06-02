@@ -6,26 +6,24 @@ let cursos = [
 	
 	let buscarCurso = (idCurso) => cursos.find( cursoABuscar => cursoABuscar.id == idCurso);
 	
-	let mostrarCurso = (curso,callback) => {
-			setTimeout(function(){
+	let mostrarCurso = (curso) => {
 			let resultado=(
 						'Id: '+curso.id+'\n'+
 						'Nombre del curso: '+curso.nombre+'\n'+
 						'Duracion: '+curso.duracion+'\n'+
 						'Costo: $'+curso.costo +'\n'	
 					   );
-				callback(resultado);	   	
-			},2000 * cursos.indexOf(curso));			   	   
+					   return resultado;	   			   	   
 	}
 	
 	
 	let verCursos = () => {
-		console.log('Oferta de Cursos:');
+		text="";
+		text+='Oferta de Cursos:';
 		for (i=0;i<cursos.length;i++){
-			mostrarCurso(cursos[i],function(resultado){
-				console.log(resultado)
-			});
+			text+=mostrarCurso(cursos[i]);
 		}
+		return text;
 	}
 	module.exports={
 		buscarCurso,

@@ -9,6 +9,12 @@
   "author": "carlos",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "yargs": "^13.2.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlosgonzalez123actividad1navegador.git"
   }
 }
